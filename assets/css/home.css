@@ -1,0 +1,29 @@
+
+body {
+    background-color: #fff3c2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 img {
+    height: auto;
+    width: 100em; /* Use 100% instead of 100vw to respect any container padding */
+    display: block; /* Ensure it behaves like a block element */
+    max-width: 100%;
+    justify-self:center;
+    margin-top:2.5%;
+}
+
+h2{
+    justify-self: center;
+    display:block;
+    font-size: 4.5vw;
+    height:auto;
+    margin-top:-10%;
+}
+
+.container{
+    display: inline-block; /* Makes the child divs sit side by side */
+    gap: 10px; /* Optional: adds space between the divs */
+    justify-content: center;
+    height: auto;
+}
