@@ -5,3 +5,19 @@ body {
     margin:1;
     padding: 0px; /* Also consider resetting padding */
 }
+
+/*
+Mobile settings
+*/
+.content-wrapper {
+    max-width: 700px; 
+    margin: 0 auto; 
+    padding: 0 16px;
+}
+
+.fixed-image{
+    background-color:red;
+    width: 6vw; 
+    height: 6vw;
+    position: fixed; 
+}
