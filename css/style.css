@@ -10,10 +10,11 @@ REFACTORED CSS FOR MOBILE RESPONSIVENESS
 
 body {
     /* Ensure the background scales and repeats */
-    background-image: url('../elements/pink_sparkles.gif'); /* Placeholder for your local gif */
-    background-size: 50%;
+    background-image: url('/elements/leaves-border.svg');
+    background-color:#fff3c2;
+    background-size:100%;
     background-repeat: repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     display: block;
     margin: 0;
     padding: 0;
@@ -28,13 +29,12 @@ h1 {
 /* Header Image (Name and Clouds) */
 h1 img {
     height: auto;
-    width: 175%; /* Use 100% instead of 100vw to respect any container padding */
+    width: 110%; /* Use 100% instead of 100vw to respect any container padding */
     display: block; /* Ensure it behaves like a block element */
     max-width: 175%;
     margin-bottom: 2.5%;
     justify-self:center;
     margin-top:2.5%;
-    margin-left:-10%;
 }
 
        /* NEW THEME SELECTOR STYLES */
@@ -124,7 +124,10 @@ ul li img {
 }
 
 ul li:hover {
-    background-color: #fa94e7;
+    /* background-color: #461dff; */
+    background-color: #e27921;
+    background-size:100%;
+    background-repeat:no-repeat;
     border-radius:5px;
     transform: translateY(-2px);
     /* 4. Increase the shadow size and intensity */
@@ -145,8 +148,9 @@ ul li:active {
     display: flex;
     position: relative;
     justify-content: center; /* Center horizontally */
+    justify-self:center;
     align-items: center; /* Center vertically */
-    max-width: 95vw; /* Max width set by your image */
+    max-width: 70vw; /* Max width set by your image */
     /* margin: 20px auto; Center the whole frame */
     height: auto;
     margin-top:5%;
@@ -190,18 +194,18 @@ ul li:active {
     display: none;
     position: absolute; /* Relative to .media-frame */
     /* REMOVED fixed vw top/left positioning */
-    height: 65%; /* Adjusted for better fit inside frame placeholder */
-    width: 60%; /* Adjusted for better fit inside frame placeholder */
+    height: 60%; /* Adjusted for better fit inside frame placeholder */
+    width: 70%; /* Adjusted for better fit inside frame placeholder */
     max-width: 500px;
-    top: 55%; /* Center vertically */
-    left: 53%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Fine-tune centering */
     overflow: hidden;
     /* Added aspect ratio styling for rotated images */
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius:6px;
+    border-radius:2px;
 }
 
 .mySlides img {
@@ -218,11 +222,11 @@ ul li:active {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 56%;
+    top: 50%;
     transform: translateY(-50%); /* Center vertically relative to top: 50% */
     width: auto;
     padding: 10px 5px;
-    color: rgb(224, 117, 220);
+    color: rgb(255, 132, 0);
     font-weight: bold;
     font-size: 2rem; /* Use rem for readable font size */
     transition: 0.6s ease;
@@ -232,15 +236,15 @@ ul li:active {
 }
 
 .prev {
-    left: 15%; /* Position 5% from the left edge of the frame */
+    left: 13%; /* Position 5% from the left edge of the frame */
 }
 
 .next {
-    right: 11%; /* Position 5% from the right edge of the frame */
+    right: 13%; /* Position 5% from the right edge of the frame */
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(196, 150, 227, 0.8);
+    background-color: rgba(34, 85, 255, 0.8);
 }
 
 /* Fading animation */
@@ -594,14 +598,14 @@ ul li:active {
     ul {
         flex-direction: row; /* Menu items arrange horizontally */
         justify-content: center;
-        font-size: 1.2rem; /* Fixed size for better desktop readability */
+        font-size: 1.1rem; /* Fixed size for better desktop readability */
         padding: 0px 0;
         border-radius: 5px;
-        background-color: rgb(111, 86, 238); /* Restore full-width bar background */
+        background-color:#4b9ebf; /* Restore full-width bar background */
         margin: 0; /* Remove mobile margins */
         align-items: stretch;
         gap: 2rem; /* Space out the horizontal links */
-        box-shadow: 0 8px 8px rgba(34, 19, 248, 0.324);
+        box-shadow: 0 8px 8px rgba(10, 6, 83, 0.871);
     }
     ul li {
         padding: 0 1rem; /* Use fixed rem for padding between items */
@@ -626,7 +630,7 @@ ul li:active {
         height: 100%;
         justify-content: center; /* Center content vertically within the list item */
         color:white;
-        background-color: transparent;
+        background-color: white;
     }
 
     ul li img {
