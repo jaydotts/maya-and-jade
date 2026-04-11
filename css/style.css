@@ -117,20 +117,17 @@ ul li:active {
 .media-frame {
     display: flex;
     position: relative;
-    justify-content: center; /* Center horizontally */
-    justify-self:center;
-    align-items: center; /* Center vertically */
-    max-width: 70vw; /* Max width set by your image */
-    /* margin: 20px auto; Center the whole frame */
-    height: auto;
-    margin-top:5%;
-    /* overflow: hidden; Removed scroll for slider component */
+    justify-content: center;
+    align-items: center;
+    width: 90vw;       /* Use a wider width for mobile */
+    max-width: 80%;  /* Match your slide max-width */
+    margin: 5% auto 0 auto; /* This centers the frame itself on the page */
 }
 
-.media-frame > img {
+/* .media-frame > img {
     width: 100%;
     height: auto;
-}
+} */
 
 .image-textbox {
     border-radius: .5em;
