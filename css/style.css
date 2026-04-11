@@ -26,12 +26,12 @@ h1 {
     overflow:hidden;
 }
 
-/* Header Image (Name and Clouds) */
+/* Header Image (Name and Flowers) */
 h1 img {
     height: auto;
     width: 90%; /* Use 100% instead of 100vw to respect any container padding */
-    display: block; /* Ensure it behaves like a block element */
-    max-width: 175%;
+    display: flex; /* Ensure it behaves like a block element */
+    max-width: 100%;
     margin-bottom: 2.5%;
     justify-self:center;
     margin-top:2.5%;
