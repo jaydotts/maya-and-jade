@@ -31,9 +31,10 @@ h1 img {
     height: auto;
     width: 90%; /* Use 100% instead of 100vw to respect any container padding */
     display: flex; /* Ensure it behaves like a block element */
+    justify-content:center;
     max-width: 100%;
     margin-bottom: 2.5%;
-    justify-self:center;
+    justify-self: center;
     margin-top:2.5%;
 }
 
