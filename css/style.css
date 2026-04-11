@@ -23,48 +23,17 @@ body {
 }
 
 h1 {
-    overflow:hidden;
+    display: flex;
+    justify-content: center; /* This centers the image inside the h1 */
+    overflow: hidden;
 }
 
 /* Header Image (Name and Flowers) */
 h1 img {
     height: auto;
-    width: 90%; 
+    width: 90%;
     max-width: 100%;
-    display: block;      /* Changed from flex */
-    margin-left: auto;   /* Pushes from the left */
-    margin-right: auto;  /* Pushes from the right */
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
-}
-
-       /* NEW THEME SELECTOR STYLES */
-.theme-selector {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 2px;
-    margin-top: -6%; /* Space it down from the header image */
-    margin-bottom: 5%; /* Space it above the navigation */
-    /*background-color:#fa00cc32; /* Slight transparent white background for readability */
-    border-radius: 8px;
-    /*box-shadow: 0 2px 4px rgba(28, 17, 234, 0.873);*/
-    font-size: 0.8rem;
-    color: #8903ff;
-}
-
-.theme-selector label {
-    font-weight: 600;
-    font-size:1rem;
-}
-
-.theme-selector select {
-    padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ad00f7;
-    cursor: pointer;
-    color:rgb(255, 0, 212);
+    margin: 2.5% 0; /* Vertical margin only */
 }
 
 /* NAVIGATION FIX: Mobile-first stacking (vertical) 
@@ -192,28 +161,35 @@ ul li:active {
 }
 
 /* Hide the images by default */
+
 .mySlides {
-    display: none;
-    position: absolute; /* Relative to .media-frame */
-    /* REMOVED fixed vw top/left positioning */
-    height: 60%; /* Adjusted for better fit inside frame placeholder */
-    width: 70%; /* Adjusted for better fit inside frame placeholder */
+    /* Standard state is hidden; your JavaScript should change this to 'flex' or 'block' */
+    display: none; 
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Responsive sizing */
+    width: 70%;
+    height: 60%;
     max-width: 500px;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Fine-tune centering */
-    overflow: hidden;
-    /* Added aspect ratio styling for rotated images */
-    display: flex;
+    
+    /* Layout for the image inside */
     justify-content: center;
     align-items: center;
-    border-radius:2px;
+    overflow: hidden;
+    border-radius: 2px;
 }
 
 .mySlides img {
+    /* Use max-width/height to ensure it never overflows the 70%/60% container */
+    max-width: 100%;
     width: 100%;
     height: auto;
-    object-fit: contain; /* Ensure image fits without distortion */
+    height: auto;
+    object-fit: contain;
     /* Removed inline style fixes like transform: rotate(90deg) and margin-top, which are inconsistent */
     transform: none !important;
     margin-top: 0 !important;
