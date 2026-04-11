@@ -186,14 +186,10 @@ ul li:active {
 .mySlides img {
     /* Use max-width/height to ensure it never overflows the 70%/60% container */
     max-width: 100%;
-    width: 100%;
-    height: auto;
+    /* max-height: 100%; */
+    width: auto;
     height: auto;
     object-fit: contain;
-    /* Removed inline style fixes like transform: rotate(90deg) and margin-top, which are inconsistent */
-    transform: none !important;
-    margin-top: 0 !important;
-    left: auto !important;
 }
 
 /* Next & previous buttons */
@@ -625,34 +621,7 @@ ul li:active {
         margin-top: 2.5%;
         margin-bottom: 2.5%;
     }
-    .theme-selector {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        padding: 2px;
-        margin-top: -6%; /* Space it down from the header image */
-        margin-bottom: 5%; /* Space it above the navigation */
-        /*background-color:#fa00cc32; /* Slight transparent white background for readability */
-        border-radius: 8px;
-        /*box-shadow: 0 2px 4px rgba(28, 17, 234, 0.873);*/
-        font-size: 1.2rem;
-        color: #8903ff;
-    }
     
-    .theme-selector label {
-        font-weight: 600;
-        font-size:1.3rem;
-    }
-    
-    .theme-selector select {
-        padding: 8px;
-        border-radius: 6px;
-        border: 1px solid #c61af5;
-        cursor: pointer;
-        color:rgb(255, 0, 212);
-    }
-
     .bio-container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
