@@ -29,13 +29,13 @@ h1 {
 /* Header Image (Name and Flowers) */
 h1 img {
     height: auto;
-    width: 90%; /* Use 100% instead of 100vw to respect any container padding */
-    display: flex; /* Ensure it behaves like a block element */
-    justify-content:center;
+    width: 90%; 
     max-width: 100%;
+    display: block;      /* Changed from flex */
+    margin-left: auto;   /* Pushes from the left */
+    margin-right: auto;  /* Pushes from the right */
+    margin-top: 2.5%;
     margin-bottom: 2.5%;
-    justify-self: center;
-    margin-top:2.5%;
 }
 
        /* NEW THEME SELECTOR STYLES */
@@ -641,12 +641,13 @@ ul li:active {
     }
     h1 img {
         height: auto;
-        width: 90%; /* Use 100% instead of 100vw to respect any container padding */
-        display: block; /* Ensure it behaves like a block element */
-        max-width: 90%;
-        margin-bottom: 0%;
-        margin-top:0%;
-        margin-left:0%;
+        width: 80%; 
+        max-width: 100%;
+        display: block;      /* Changed from flex */
+        margin-left: auto;   /* Pushes from the left */
+        margin-right: auto;  /* Pushes from the right */
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
     }
     .theme-selector {
         display: flex;
