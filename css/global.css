@@ -1,0 +1,271 @@
+/*
+REFACTORED CSS FOR MOBILE RESPONSIVENESS
+*/
+
+.content-wrapper {
+    max-width: 750px; 
+    margin: 0 auto; 
+    padding: 0 16px;
+}
+
+body {
+    /* Ensure the background scales and repeats */
+    background-image: url('/elements/leaves-border.svg');
+    background-color:#fff3c2;
+    background-size:100%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
+}
+/* h1 is shared among all pages */
+h1 {
+    display: flex;
+    justify-content: center; /* This centers the image inside the h1 */
+    overflow: hidden;
+}
+
+/* Header Image (Names) */
+h1 img {
+    height: auto;
+    width: 90%;
+    max-width: 100%;
+    margin: 2.5% 0; /* Vertical margin only */
+}
+
+/* 
+This area contains a mobile-first version of the HTML. 
+For desktop, scroll down.
+*/
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 0.75rem; /* Increased gap to show more background */
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0; /* Add margin above and below the menu for spacing */
+    padding: 0; 
+    /* background-color REMOVED here to let the body background show */
+    font-size: 1.1rem; 
+    color: white; 
+    text-align: center;
+    align-items: center; /* Center the entire list of boxes horizontally */
+}
+
+ul li {
+    width: 50%; /* Take up 90% of the centered space */
+    max-width: 320px; /* Constrain the box size */
+    padding: 10px; /* Increase vertical padding */
+    text-align: center;
+    border-radius: 8px; /* Nicer rounded corners */
+    cursor: pointer;
+    /*background-color: rgb(111, 86, 238); /* ADDED PURPLE BACKGROUND HERE */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+
+ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+ul li a.no-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: none;
+    border-radius: 0px;
+}
+
+ul li img {
+    height: auto;
+    width: 30px; /* Fixed small size for icons */
+    margin-bottom: 4px;
+}
+
+ul li:hover {
+    /* background-color: #461dff; */
+    /* background-color: #e27921; */
+    background-size:100%;
+    background-repeat:no-repeat;
+    border-radius:0px;
+    transform: translateY(-4px);
+    /* 4. Increase the shadow size and intensity */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Optional: "Click down" effect */
+ul li:active {
+  /* Move button down 1 pixel and soften the shadow to simulate being pressed */
+  transform: translateY(-1px);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); */
+}
+
+/* 
+CONTROLS STYLE FOR COMPRESSED DROPDOWN MENU
+(MOBILE-FRIENDLY)
+*/
+.details-menu {
+    background-color:#4b9ebf;
+    text-align: center;
+    justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
+    width:75%;
+    max-width:75%;
+    cursor: pointer;
+}
+
+.details-menu details {
+    font-size: 1em;
+    border: 2px solid;
+    border-color: #000000 #808080 #808080 #000000;
+    box-shadow: 1px 1px 0 0 #000, inset 1px 1px 0 0 #dfdfdf;
+    color:white;
+    font-size: large;
+}
+
+.details-menu details ul a{
+    /* The 3D Bevel Effect */
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    /* Inner shadow for the "doubled" look */
+    box-shadow: 
+    inset 1px 1px #dfdfdf, 
+    0px 1px 0px 0px #000000;
+    background-color:#070090;
+    color:rgb(255, 255, 255);
+}
+
+.details-menu details > summary {
+  list-style: none;
+  padding:.2em;
+  justify-items: center;
+}
+.details-menu details > summary::-webkit-details-marker {transition:1s;
+  display: none;
+}
+
+/* 
+CONTROLS THE DESKTOP-ONLY FEATURES
+*/
+@media (max-width: 900px) {
+    nav {
+        display:none;
+    }
+}
+@media (min-width: 900px) {
+
+    .details-menu details {
+        display: none;
+    }
+
+    /* 
+    CONTROLS MENU BAR ON DESKTOP
+    */
+    ul {
+        flex-direction: row; /* Menu items arrange horizontally */
+        justify-content: center;
+        font-size: 1.1rem; /* Fixed size for better desktop readability */
+        padding: 0px 0;
+        border-radius: 5px;
+        background-color:#4b9ebf; /* Restore full-width bar background */
+        margin: 0; /* Remove mobile margins */
+        align-items: stretch;
+        gap: 2rem; /* Space out the horizontal links */
+        box-shadow: 0 8px 8px rgba(10, 6, 83, 0.871);
+    }
+    ul li {
+        padding: 0 0.4rem; /* Use fixed rem for padding between items */
+        background-color: transparent; /* Remove background from LI */
+        max-width: 80%;
+        width: 80%;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+    ul li a {
+        flex-direction: column; /* EDIT: Stack icons and text vertically on wide screens */
+        gap: 0.25rem; /* Small vertical gap between icon and text */
+        height: 100%;
+        justify-content: center; /* Center content vertically within the list item */
+        color:white;
+        background-color: transparent;
+        border-radius: 5px;
+    }
+
+    ul li a.no-background {
+        flex-direction: column; /* EDIT: Stack icons and text vertically on wide screens */
+        gap: 0.25rem; /* Small vertical gap between icon and text */
+        height: 100%;
+        justify-content: center; /* Center content vertically within the list item */
+        color:white;
+        background-color: white;
+    }
+
+    ul li img {
+        width: 40px; /* Fixed size for icon on desktop */
+        margin-bottom: 0;
+    }
+    ul li:hover {
+        background-color: #e27921;
+        border-radius: 5px;
+    }
+
+    h1 img {
+        height: auto;
+        width: 80%; 
+        max-width: 100%;
+        display: block;      /* Changed from flex */
+        margin-left: auto;   /* Pushes from the left */
+        margin-right: auto;  /* Pushes from the right */
+        margin-top: 2.5%;
+        margin-bottom: 2.5%;
+    }
+    
+    /* 
+    SMALL ADJUSTMENTS TO PHOTO CAROUSEL
+    */
+    .prev, .next {
+        background-color: rgba(243, 245, 145, 0.638);
+    }
+}
+
+footer {
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-bottom:5%;
+}
+
+footer img {
+    height: auto;
+    width: 20%;
+    max-width: 20%;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {opacity: 1}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .5}
+    to {opacity: 1}
+}
