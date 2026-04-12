@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Wedding Site Fix</title>
+    <title>M+J Wedding Home Page</title>
     <link rel="stylesheet" href="../css/style.css">
-    <!-- Load Tailwind CSS from CDN for general styling support -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <div class="content-wrapper">
-        <body>
+    <body>
         <header>
             <a href="hello.html">
                 <h1 style="margin-bottom: -1%;">
@@ -22,40 +21,40 @@
                 <div class="details-menu">
                     <details>
                         <summary> 
-                            <img src="../elements/menu-icon.png" style="width:2.5em;">
+                            Menu
                         </summary>
                             <ul>
-                                <li style="color:pink; border-radius:5px; transform: translateY(-2px);">
+                                <li style="border-radius:5px; transform: translateY(-2px);">
                                     <a href="hello.html">
                                         <!-- <img src="../elements/home-button.gif" alt="RSVP Letter icon" 
                                         style="margin-top:2%;"> -->
                                         Home
                                     </a>
                                 </li>
-                                <li style="color:pink">
+                                <li>
                                     <a href="#rsvp">
-                                        RSVP
+                                        Events
                                     </a>
                                 </li>
 
-                                <li style="color:pink">
+                                <li>
                                     <a href="our_story.html">
-                                        Our Story
+                                        Travel Info
                                     </a>
                                 </li>
-                                <li style="color:pink">
+                                <li>
                                     <a href="photos.html">
                                         Photos
                                     </a>
                                 </li>
-                                <li style="color:pink">
+                                <li>
                                     <a href="event_info.html">
-                                        Event Info
+                                        RSVP
                                     </a>
                                 </li>
-                                <li style="color:pink">
+                                <li>
                                     <a href="bridal_party.html">
-                                        Bridal Party
+                                        FAQ
                                     </a>
                                 </li>
                             </ul>
@@ -64,43 +63,35 @@
             <h2>
                 <nav>
                     <ul>
-                        <li style="color:pink; background-size:100%; border-radius:5px;">
+                        <li style="background-color:orange; border-radius:5px;">
                             <a href="hello.html">
-                                <!-- <img src="../elements/home-button.gif" alt="RSVP Letter icon" 
-                                style="margin-top:2%;"> -->
                                 Home
                             </a>
                         </li>
-                        <li style="color:pink">
+                        <li>
                             <a href="#rsvp">
-                                <!-- <img src="../elements/letter.gif" alt="RSVP Letter icon" 
-                                style="margin-top:2%;"> -->
-                                RSVP
+                                Events
                             </a>
                         </li>
 
-                        <li style="color:pink">
+                        <li>
                             <a href="our_story.html">
-                                <!-- <img src="../elements/lil-heart.gif" alt="Our Story Heart icon"> -->
-                                Our Story
+                                Travel Info
                             </a>
                         </li>
-                        <li style="color:pink">
+                        <li>
                             <a href="photos.html">
-                                <!-- <img src="../elements/camera.gif" alt="Photos Camera icon"> -->
                                 Photos
                             </a>
                         </li>
-                        <li style="color:pink">
+                        <li>
                             <a href="event_info.html">
-                                <!-- <img src="../elements/info-bubble.gif" alt="Event Info Bubble icon"> -->
-                                Event Info
+                                RSVP
                             </a>
                         </li>
-                        <li style="color:pink">
+                        <li>
                             <a href="bridal_party.html">
-                                <!-- <img src="../elements/lil-star.gif" alt="Bridal Party Star icon"> -->
-                                Bridal Party
+                                FAQ
                             </a>
                         </li>
                     </ul>
@@ -148,80 +139,56 @@
                 We can't wait to celebrate with you! 
             </p>
         </div>
+        <footer>
+            <img src="../elements/bird-and-tree.gif">
+        </footer>
         
-        <script>
-            
-        const themeSettings = {
-            'default': '../elements/name-and-clouds.gif',
-            'hitched': '../elements/name-western.gif',
-            'gold': 'https://placehold.co/800x200/ffd700/800000?text=Golden+Hour+Header'
-        };
+            <script>
+                const themeSettings = {
+                    'default': '../elements/name-and-clouds.gif',
+                    'hitched': '../elements/name-western.gif',
+                    'gold': 'https://placehold.co/800x200/ffd700/800000?text=Golden+Hour+Header'
+                };
 
-        // UPDATED FUNCTION: Finds the header image element and sets its src attribute
-        function changeTheme(newTheme) {
-            const imageElement = document.getElementById('header-image');
-            
-            if (imageElement) {
-                const newImageUrl = themeSettings[newTheme] || themeSettings['default'];
-                // Set the image source directly
-                imageElement.src = newImageUrl;
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls (kept for functionality, though dots are commented out)
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    // let dots = document.getElementsByClassName("dot"); // commented out
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    /*
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    */
+                    // Only show the selected slide
+                    if (slides.length > 0) {
+                            slides[slideIndex - 1].style.display = "flex"; 
+                    }
+                    // if (dots.length > 0) { dots[slideIndex - 1].className += " active"; } // commented out
+                }
                 
-                console.log("Header image changed to theme:", newTheme);
-            } else {
-                console.error("Header image element not found!");
-            }
-        }
-        
-        // Initialize the theme on load to match the dropdown selection
-        function initializeTheme() {
-            const initialTheme = document.getElementById('theme-select').value;
-            // Call changeTheme to set the initial header image
-            changeTheme(initialTheme);
-        }
-
-            let slideIndex = 1;
-            showSlides(slideIndex);
-
-            // Next/previous controls
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            // Thumbnail image controls (kept for functionality, though dots are commented out)
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                // let dots = document.getElementsByClassName("dot"); // commented out
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
+                // Ensure the first slide is shown on load
+                window.onload = function() {
+                    showSlides(1);
                 }
-                /*
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                */
-                // Only show the selected slide
-                if (slides.length > 0) {
-                        slides[slideIndex - 1].style.display = "flex"; 
-                }
-                // if (dots.length > 0) { dots[slideIndex - 1].className += " active"; } // commented out
-            }
-            
-            // Ensure the first slide is shown on load
-            window.onload = function() {
-                showSlides(1);
-            }
-        </script>
+            </script>
         </body>
-    </div>
-
-    <footer>
-        <img src="../elements/queercoded-blinky.gif">
-    </footer>
+</div>
 </html>
