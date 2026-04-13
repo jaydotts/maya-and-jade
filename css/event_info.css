@@ -1,0 +1,14 @@
+
+.itinerary{
+    display:block;
+    text-align:left;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content: center;
+    width:85%;
+}
+
+.highlight{
+    color:rgb(57, 136, 1);
+    font-weight: bold;
+}

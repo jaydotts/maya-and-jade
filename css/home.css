@@ -76,36 +76,3 @@ CONTROLS THE PHOTO CAROUSEL
     animation-name: fade;
     animation-duration: 1.5s;
 }
-
-/* 
-CONTROLS THE BLURB UNDER THE PHOTO CAROUSEL
-*/
-.image-textbox {
-    border-radius: .5em;
-    margin-top: 5%;
-    margin-bottom: 20%;
-    
-    /* Centering Logic */
-    max-width: 80%;
-    margin-left: auto;  /* Required for centering block elements */
-    margin-right: auto; /* Required for centering block elements */
-    
-    /* Content Alignment */
-    text-align: center; /* Centers the text inside */
-    padding: 2px;      /* Added padding so text doesn't hit the borders */
-
-    /* Background Styling */
-    background: none;
-    
-}
-
-.image-textbox p {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 0.5em;
-    margin-left:10%; 
-    margin-right: 10%; 
-    margin-top:5%;
-    margin-bottom:5%;
-    font-size:110%;
-}
-
