@@ -6,132 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M+J Wedding: Getting There</title>
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/home.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <div class="content-wrapper">
     <body>
         <header>
-            <a href="hello.html">
-                <h1 style="margin-bottom: -1%;">
-                    <!-- Using a placeholder for your gif -->
-                    <img id="header-image" src="../elements/names-flowers.svg" alt="Site Header Name">
-                </h1>
+            <a href="hello.html" class="header-logo">
+                <img id="header-image" src="../elements/names-flowers.svg" alt="Names and Flowers Logo">
             </a>
-                <div class="details-menu">
-                    <details>
-                        <summary> 
-                            Menu
-                        </summary>
-                            <ul>
-                                <li style="border-radius:5px; transform: translateY(-2px);">
-                                    <a href="hello.html">
-                                        <!-- <img src="../elements/home-button.gif" alt="RSVP Letter icon" 
-                                        style="margin-top:2%;"> -->
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="oops.html">
-                                        RSVP
-                                    </a>
-                                </li>
 
-                                <li>
-                                    <a href="event_info_onsite.html">
-                                        Events
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="oops.html">
-                                        Travel Info
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="oops.html">
-                                        Photos
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="oops.html">
-                                        FAQ
-                                    </a>
-                                </li>
-                            </ul>
-                    </details>
-                </div>
-            <h2>
-                <nav>
+            <div class="details-menu">
+                <details>
+                    <summary>Menu</summary>
                     <ul>
-                        <li>
-                            <a href="hello.html">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="oops.html">
-                                RSVP
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="event_info_onsite.html">
-                                Events
-                            </a>
-                        </li>
-                        <li style="background-color:#e27921; border-radius:5px;">
-                            <a href="travel_onsite.html" >
-                                Travel Info
-                            </a>
-                        </li>
-                        <li>
-                            <a href="oops.html">
-                                Photos
-                            </a>
-                        </li>
-                        <li>
-                            <a href="oops.html">
-                                FAQ
-                            </a>
-                        </li>
+                        <li><a href="hello.html">Home</a></li>
+                        <li><a href="oops.html">RSVP</a></li>
+                        <li><a href="event_info_onsite.html">Events</a></li>
+                        <li><a href="oops.html">Travel Info</a></li>
+                        <li><a href="oops.html">Photos</a></li>
+                        <li><a href="oops.html">FAQ</a></li>
                     </ul>
-                </nav>
-            </h2>
+                </details>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="hello.html">Home</a></li>
+                    <li><a href="oops.html">RSVP</a></li>
+                    <li><a href="event_info_onsite.html">Events</a></li>
+                    <li class="active"><a href="travel_onsite.html">Travel Info</a></li>
+                    <li><a href="oops.html">Photos</a></li>
+                    <li><a href="oops.html">FAQ</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <div class="image-textbox" style="justify-items: center;">
-            <div style="font-size: x-large; font-weight: bold;" id="getting_there">
-                Getting There
-            </div>
+        <main class="image-textbox">
+            <section id="getting_there">
+                <h1 class="title">Getting There</h1>
+                
+                <h2 class="subtitle">The Venue</h2>
+                <p>
+                    Our venue is Holly Farm, located at 
+                    <a href="https://maps.google.com/?q=9200+Carmel+Valley+Rd,+Carmel,+CA+93923" target="_blank" rel="noopener">
+                        9200 Carmel Valley Rd, Carmel, CA 93923.
+                    </a>
+                </p>
 
-            <p>
-                Our venue is Holly Farm, located at 
-                <a href="https://maps.app.goo.gl/k7N8DUzZ1EqqFiUB6" style="color:blue" title="Show in Google Maps">
-                    9200 Carmel Valley Rd, Carmel, CA 93923.
-                </a>
-            </p>
-
-            <div style="margin-bottom: 5%; max-width:100%;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1603.087582400205!2d-121.81611224389376!3d36.525768243910406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808dee2be5561033%3A0xb0f081971acf0e6e!2sHolly%20Farm!5e0!3m2!1sen!2sus!4v1776055827919!5m2!1sen!2sus" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>    
-            <p>
-                The closest major airports to the venue are:
-                <div>
-                    San Francico International (SFO)
-                </div> 
-                and 
-                <div>
-                    San Jose International (SJC)
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1603.087582400205!2d-121.81611224389376!3d36.525768243910406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808dee2be5561033%3A0xb0f081971acf0e6e!2sHolly%20Farm!5e0!3m2!1sen!2sus!4v1776055827919!5m2!1sen!2sus" width="80%" height="300px" style="border:0; display:flex; margin-left:auto; margin-right:auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </p>
 
-            <div style="font-size: x-large; font-weight: bold;" id="lodging">
-                Lodging
-            </div>
-            <p>
-                Information about lodging.
-            </p>
-        </div>
+                <p><strong>If driving:</strong> Directions go here.</p>
+            </section>
+
+            <section id="lodging">
+                <h2 class="title">Lodging</h2>
+                <p>Information about lodging goes here.</p>
+            </section>
+        </main>
     </body>
 </div>
+</div>
+</html>

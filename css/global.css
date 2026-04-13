@@ -20,11 +20,24 @@ body {
     padding: 0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 header{
     justify-content: center;
     margin-left:auto;
     margin-right:auto;
+    display:block;
 }
+.header-logo{
+    justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+}
+
+.header-logo img{
+    max-width:90%;
+}
+
 /* h1 is shared among all pages */
 h1 {
     display: flex;
@@ -114,6 +127,14 @@ ul li:active {
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); */
 }
 
+.main-nav ul li.active {
+    background-color: #e27921;
+    border-radius: 5px;
+}
+
+.main-nav ul li.active a {
+    color: white;
+}
 /* 
 CONTROLS STYLE FOR COMPRESSED DROPDOWN MENU
 (MOBILE-FRIENDLY)
@@ -191,6 +212,18 @@ GENERAL BLURB
     margin-top:5%;
     margin-bottom:5%;
     font-size:110%;
+}
+
+/* 
+GENERIC STYLIZATION
+*/
+.title{
+    font-size:x-large;
+    font-weight: bold;
+}
+.subtitle{
+    font-size:larger;
+    font-weight: bold;
 }
 
 /* 
