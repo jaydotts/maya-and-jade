@@ -113,11 +113,29 @@
             }, 1500);
         // PASSWORD - STANDARD GUEST
         } else if (enteredPassword === STANDARD) {
-            messageDisplay.textContent = "Welcome: Standard Guest";
-            messageDisplay.classList.add('text-red-500');
+            messageDisplay.textContent = "Welcome! Redirecting...";
+            messageDisplay.classList.add('text-green-600');
+            
+            setTimeout(() => {
+                window.location.href = "hello.html"; 
+            }, 1500);
+
+            setTimeout(() => {
+                closeModal();
+                console.log('User accessed private content.'); 
+            }, 1500);
         } else if (enteredPassword === ONSITE) {
-            messageDisplay.textContent = "Welcome: Onsite Guest";
-            messageDisplay.classList.add('text-red-500');
+            messageDisplay.textContent = "Welcome! Redirecting...";
+            messageDisplay.classList.add('text-green-600');
+            
+            setTimeout(() => {
+                window.location.href = "hello_onsite.html"; 
+            }, 1500);
+
+            setTimeout(() => {
+                closeModal();
+                console.log('User accessed private content.'); 
+            }, 1500);
         } else if (enteredPassword === "") {
             messageDisplay.textContent = "Please enter a password.";
             messageDisplay.classList.add('text-red-500');
