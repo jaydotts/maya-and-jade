@@ -1,0 +1,22 @@
+.photo-grid {
+  display: grid;
+  /* 'auto-fit' adds as many columns as will fit, at least 250px wide each */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px; /* Space between photos */
+  padding: 10px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height:auto;     /* Set a fixed height for uniformity */
+  object-fit: cover;   /* This prevents the images from stretching/distorting */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Subtle zoom effect when you hover */
+.photo-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
