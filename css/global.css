@@ -214,6 +214,13 @@ GENERAL BLURB
     font-size:110%;
 }
 
+.image-textbox img{
+    max-width:80%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
 /* 
 GENERIC STYLIZATION
 */
@@ -223,6 +230,10 @@ GENERIC STYLIZATION
 }
 .subtitle{
     font-size:larger;
+    font-weight: bold;
+}
+.highlight{
+    color:rgb(57, 136, 1);
     font-weight: bold;
 }
 
