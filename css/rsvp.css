@@ -1,0 +1,12 @@
+.form-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Optional: Keeps the form from getting too wide */
+  margin: 0 auto;   /* Centers the form */
+}
+
+.form-container iframe {
+  width: 100%;
+  height: 90vh;      /* Sets height to 90% of the viewport height */
+  border: none;
+}
