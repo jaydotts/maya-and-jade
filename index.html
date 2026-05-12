@@ -60,8 +60,8 @@
     const modal = document.getElementById('password-modal');
     const passwordInput = document.getElementById('password-input');
     const messageDisplay = document.getElementById('password-message');
-    const STANDARD = "standard";
-    const ONSITE = "onsite";
+    const STANDARD = 'YXByaWNvdA==';
+    const ONSITE = 'Y29yYWx0cmVl';
 
     // --- NEW LOGIC: Listen for the Enter Key ---
     passwordInput.addEventListener('keydown', function(event) {
@@ -92,14 +92,17 @@
     /**
      * Checks the password entered by the user.
      */
+
+    // For nerds reading this, yes I know this is not very secure
+    // Security through obscurity!
+    // Go ahead and hack me, i dont care
     function checkPassword() {
         const enteredPassword = passwordInput.value.trim();
         messageDisplay.textContent = "";
         messageDisplay.classList.remove('text-green-600', 'text-red-500');
 
-        // ARE YOU HAPPY NOW, PK????????
-        // IT'S NOT PERFECT BUT IT'S BETTER
-        if (enteredPassword === atob('Y29yYWx0cmVl')) {
+        // STANDARD GUEST
+        if (enteredPassword === atob(STANDARD)) {
             messageDisplay.textContent = "Welcome! Redirecting...";
             messageDisplay.classList.add('text-green-600');
             
@@ -111,25 +114,13 @@
                 closeModal();
                 console.log('User accessed private content.'); 
             }, 1500);
-        // PASSWORD - STANDARD GUEST
-        } else if (enteredPassword === STANDARD) {
+        // PASSWORD - ONSITE GUEST
+        } else if (enteredPassword === atob(ONSITE)) {
             messageDisplay.textContent = "Welcome! Redirecting...";
             messageDisplay.classList.add('text-green-600');
             
             setTimeout(() => {
                 window.location.href = "hello.html"; 
-            }, 1500);
-
-            setTimeout(() => {
-                closeModal();
-                console.log('User accessed private content.'); 
-            }, 1500);
-        } else if (enteredPassword === ONSITE) {
-            messageDisplay.textContent = "Welcome! Redirecting...";
-            messageDisplay.classList.add('text-green-600');
-            
-            setTimeout(() => {
-                window.location.href = "hello_onsite.html"; 
             }, 1500);
 
             setTimeout(() => {

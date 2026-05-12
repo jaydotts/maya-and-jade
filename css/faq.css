@@ -17,6 +17,7 @@
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
                 box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle "resting" shadow */
+    cursor:pointer;
 }
 .FAQ summary:hover{
     transform: translateY(-5px); /* Moves the box up 5 pixels */
@@ -27,5 +28,9 @@
     text-align: left;
     margin-top:1%;
     margin-bottom:1%;
-    cursor:pointer;
+}
+.FAQ details img{
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5%;
 }
